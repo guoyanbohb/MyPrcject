@@ -1,0 +1,81 @@
+
+//
+//  Prefix.pch
+//  CarShow
+//
+//  Created by feique on 16/3/14.
+//  Copyright © 2016年 guoyanbo. All rights reserved.
+//
+
+#ifndef Prefix_pch
+#define Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define WIDTH [UIScreen mainScreen].bounds.size.width
+#define HEIGTH [UIScreen mainScreen].bounds.size.height
+
+#ifdef __OBJC__
+
+//创建UI
+#import "ZCControl.h"
+//下载类
+#import "HttpDownLoad.h"
+//提示框
+#import "MBProgressHUD.h"
+//下拉刷新  上拉刷新
+#import "MJRefresh.h"
+//图片处理类
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
+
+//多媒体处理类
+#import "VideoPlayControl.h"
+
+//API 头条
+
+//头条的5个button
+#define BODYURL @"http://api.ycapp.yiche.com/Appnews/GetTouTiaoRecommend?appver=6.8"
+
+#define API @"http://"
+
+//说车button的网址
+#define ZIMEITI @"http://api.ycapp.yiche.com/media/getmediainfolist?deviceid=22A591F2CA8847F81FAF2F1809CFC593&type=1&pageindex=%d&pagesize=20"
+
+//社区
+//推荐上面8个button
+#define COMMUNITYRECOMMEND  @"http://cheyouapi.ycapp.yiche.com/cheyou/gettopicons"
+
+//推荐cell
+#define COMMUNITYCELL @"http://cheyouapi.ycapp.yiche.com/cheyou/recommendtopiclistv64/?deviceid=6C3D4C20A363D3BB7BF6FDF981344EF5&restype=refresh"
+
+//选车
+//推荐
+#define RECOMMEND @"http://api.ycapp.yiche.com/yicheapp/GetSelectCarPageAd?platform=2"
+
+#define SELECT @"http://cheyouapi.ycapp.yiche.com/car/getmasterbrandlist?allmasterbrand=false"
+//销量排行
+#define SALENUM @"http://223.99.255.20/app.api.autohome.com.cn/autov5.5.0/Dealer/hotsaleseries-pm1-st%@.json"
+
+//上市新车
+#define NEWCAR @"http://api.ycapp.yiche.com/car/GetSerialInfoForNew"
+
+//条件选车
+#define FACTOR @"http://extapi.ycapp.yiche.com/car/pickcar?shijian=%@&%@=%@&s=%@&page=1"
+//右侧tableViewCell
+#define RIGHTCELL @"http://api.ycapp.yiche.com/car/getseriallist?masterid=%@&allserial=false"
+
+
+
+
+//优惠
+#define FAVOURABLE @"http://api."
+//我的
+
+
+
+
+#endif
+
+#endif /* Prefix_pch */
